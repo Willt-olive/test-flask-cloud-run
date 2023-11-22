@@ -11,7 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'bc096fff-9589-460c-adc2-c7dbc6400fdf'
-  imageRepository: 'willtolivegsspringbootdocker'
+  imageRepository: 'willtolivetestflaskcloudrun'
   containerRegistry: 'cloudlab5.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/complete/Dockerfile'
   tag: '$(Build.BuildId)'
@@ -51,7 +51,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'lairdptestflaskcloudrun.default'
+    environment: 'willtolivetestflaskcloudrun.default'
     strategy:
       runOnce:
         deploy:
