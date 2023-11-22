@@ -9,14 +9,12 @@ resources:
 - repo: self
 
 variables:
-
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'e3a92530-350d-41ab-8015-2653f3ad62e4'
-  imageRepository: 'lab5'
+  dockerRegistryServiceConnection: 'bc096fff-9589-460c-adc2-c7dbc6400fdf'
+  imageRepository: 'willtolivegsspringbootdocker'
   containerRegistry: 'cloudlab5.azurecr.io'
-  dockerfilePath: '**/Dockerfile'
+  dockerfilePath: '$(Build.SourcesDirectory)/complete/Dockerfile'
   tag: '$(Build.BuildId)'
-  imagePullSecret: 'labo5test5269-auth'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
